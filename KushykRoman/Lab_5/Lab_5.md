@@ -22,7 +22,6 @@
 
 **Код:**
 ```python
-# Оголошуємо порожній клас, що представляє студента
 class Student:
     pass
 
@@ -38,7 +37,6 @@ print("Клас Student успішно оголошено!")
 class Student:
     pass
 
-# Створюємо два окремих об'єкти (екземпляри) класу Student
 student_1 = Student()
 student_2 = Student()
 
@@ -113,5 +111,5 @@ my_account = BankAccount("Тарас Шевченко", 1000)
 print(f"Власник рахунку: {my_account.owner}")
 my_account.deposit(500)
 my_account.withdraw(200)
-my_account.withdraw(5000) # Спроба зняти більше, ніж є
+my_account.withdraw(5000)
 ```
