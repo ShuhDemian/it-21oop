@@ -67,6 +67,7 @@ class User:
     def get_info(self):
         return f"Користувач: {self.name}, Email: {self.email}"
 
+
 class FileManager:
     """Клас відповідає лише за роботу з файлами."""
     @staticmethod
@@ -76,13 +77,13 @@ class FileManager:
             file.write(user.get_info())
         print(f"Дані успішно збережено у {filename}")
 
+
 # Перевірка роботи коду:
 if __name__ == "__main__":
     student = User("Олександр", "alex@example.com")
     
     # Використовуємо окремий клас для збереження
     FileManager.save_user_to_file(student)
-
 Чому це краще? Якщо ми захочемо зберігати дані не у файл, а в базу даних SQLite (або виводити їх на веб-сторінку), ми просто створимо новий клас для збереження, а сам клас `User` чіпати не доведеться.
 
 ## Запитання для самоконтролю
