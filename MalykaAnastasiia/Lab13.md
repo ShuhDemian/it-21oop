@@ -31,24 +31,27 @@ Command перетворює запит (дію) на окремий об'єкт
 
   - навести приклад коду який реалізовує даний шаблон
 
-class Light:
-    def on(self):
-        print("Light is ON")
+`class Light:`
 
+`    def on(self):`
+    
+`        print("Light is ON")`
+      
+`class LightOnCommand:`
 
-class LightOnCommand:
-    def __init__(self, light):
-        self.light = light
+`    def __init__(self, light):`
+    
+`        self.light = light`
 
-    def execute(self):
-        self.light.on()
+`    def execute(self):`
+    
+`        self.light.on()`
 
+`light = Light()`
 
-light = Light()
-command = LightOnCommand(light)
-command.execute()
+`command = LightOnCommand(light)`
 
-
+`command.execute()`
 
   ## Висновок:
   
