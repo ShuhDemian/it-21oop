@@ -38,31 +38,29 @@ D — Dependency Inversion (інверсії залежностей): код м�
 
 Код:
 
-`class Report:`
+`class Student:`
 
-`    def __init__(self, text):`
+`    def __init__(self, name, grades):`
 
-`        self.text = text`
+`        self.name = name`
 
-`    def count_words(self):`
+`        self.grades = grades`
 
-`        return len(self.text.split())`
+`    def average(self):`
 
-`class ReportSaver:`
+`        return sum(self.grades) / len(self.grades)`
 
-`    def save(self, report, filename):`
+`class StudentPrinter:`
 
-`        with open(filename, "w") as f:`
+`    def print_info(self, student):`
 
-`            f.write(report.text)`
+`        print(student.name, "- середній бал:", student.average())`
 
-`report = Report("Hello design principles")`
+`student = Student("Anna", [90, 80, 100])`
 
-`print(report.count_words())  # 3`
+`printer = StudentPrinter()`
 
-`saver = ReportSaver()`
-
-`saver.save(report, "report.txt")`
+`printer.print_info(student)`
 
   ## Висновок:
   
